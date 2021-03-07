@@ -4,45 +4,51 @@ using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
 
+// ========================================
+// MeshColliderを無効化してるアレ 量がヤバい
+// ========================================
+
+//SW_UP, SW_DWの行はダンボールハウスでのスイッチ操作のため使用。 流用するなら削除するなり
+
 namespace Kotonozaka_Ind
 {
     public class SW_COMP : UdonSharpBehaviour
     {
-        [SerializeField] private MeshCollider OBJ_001;
-        [SerializeField] private MeshCollider OBJ_002;
-        [SerializeField] private MeshCollider OBJ_003;
-        [SerializeField] private MeshCollider OBJ_004;
-        [SerializeField] private MeshCollider OBJ_005;
-        [SerializeField] private BoxCollider OBJ_006;
-        [SerializeField] private BoxCollider OBJ_007;
-        [SerializeField] private MeshCollider OBJ_008;
-        [SerializeField] private MeshCollider OBJ_009;
-        [SerializeField] private MeshCollider OBJ_010;
-        [SerializeField] private MeshCollider OBJ_011;
-        [SerializeField] private MeshCollider OBJ_012;
-        [SerializeField] private MeshCollider OBJ_013;
-        [SerializeField] private MeshCollider OBJ_014;
-        [SerializeField] private MeshCollider OBJ_015;
-        [SerializeField] private MeshCollider OBJ_016;
-        [SerializeField] private MeshCollider OBJ_017;
-        [SerializeField] private MeshCollider OBJ_018;
-        [SerializeField] private MeshCollider OBJ_019;
-        [SerializeField] private MeshCollider OBJ_020;
-        [SerializeField] private BoxCollider OBJ_021;
-        [SerializeField] private BoxCollider OBJ_022;
-        [SerializeField] private MeshCollider TBL_001;
-        [SerializeField] private MeshCollider TBL_002;
-        [SerializeField] private MeshCollider TBL_003;
-        [SerializeField] private MeshCollider TBL_004;
-        [SerializeField] private MeshCollider TBL_005;
-        [SerializeField] private MeshCollider TBL_006;
-        [SerializeField] private MeshCollider TBL_007;
-        [SerializeField] private MeshCollider TBL_008;
-        [SerializeField] private MeshCollider TBL_009;
-        [SerializeField] private MeshCollider TBL_010;
+        [SerializeField] private MeshCollider OBJ_001 = null;
+        [SerializeField] private MeshCollider OBJ_002 = null;
+        [SerializeField] private MeshCollider OBJ_003 = null;
+        [SerializeField] private MeshCollider OBJ_004 = null;
+        [SerializeField] private MeshCollider OBJ_005 = null;
+        [SerializeField] private BoxCollider OBJ_006 = null;
+        [SerializeField] private BoxCollider OBJ_007 = null;
+        [SerializeField] private MeshCollider OBJ_008 = null;
+        [SerializeField] private MeshCollider OBJ_009 = null;
+        [SerializeField] private MeshCollider OBJ_010 = null;
+        [SerializeField] private MeshCollider OBJ_011 = null;
+        [SerializeField] private MeshCollider OBJ_012 = null;
+        [SerializeField] private MeshCollider OBJ_013 = null;
+        [SerializeField] private MeshCollider OBJ_014 = null;
+        [SerializeField] private MeshCollider OBJ_015 = null;
+        [SerializeField] private MeshCollider OBJ_016 = null;
+        [SerializeField] private MeshCollider OBJ_017 = null;
+        [SerializeField] private MeshCollider OBJ_018 = null;
+        [SerializeField] private MeshCollider OBJ_019 = null;
+        [SerializeField] private MeshCollider OBJ_020 = null;
+        [SerializeField] private BoxCollider OBJ_021 = null;
+        [SerializeField] private BoxCollider OBJ_022 = null;
+        [SerializeField] private MeshCollider TBL_001 = null;
+        [SerializeField] private MeshCollider TBL_002 = null;
+        [SerializeField] private MeshCollider TBL_003 = null;
+        [SerializeField] private MeshCollider TBL_004 = null;
+        [SerializeField] private MeshCollider TBL_005 = null;
+        [SerializeField] private MeshCollider TBL_006 = null;
+        [SerializeField] private MeshCollider TBL_007 = null;
+        [SerializeField] private MeshCollider TBL_008 = null;
+        [SerializeField] private MeshCollider TBL_009 = null;
+        [SerializeField] private MeshCollider TBL_010 = null;
 
-        [SerializeField] private GameObject SW_UP;
-        [SerializeField] private GameObject SW_DW;
+        [SerializeField] private GameObject SW_UP = null;
+        [SerializeField] private GameObject SW_DW = null;
 
         public override void Interact()
         {
